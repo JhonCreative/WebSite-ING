@@ -1,0 +1,21 @@
+---
+import studentImg from "../../assets/images/studentImg.png";
+---
+
+<section class="h-[100vh] flex flex-col-reverse lg:flex-row items-center bg-cover bg-center font-inter">
+   <div class="lg:w-1/2 w-[80%] px-14">
+      <section class="flex flex-col gap-6 mb-8">
+         <h1 class="lg:text-5xl font-extrabold text-[#141418] text-3xl text-center lg:text-start">Carrera de Ingeniería de Sistemas</h1>
+         <p class="lg:text-normal text-[#969696] text-center lg:text-start">Formando el futuro a través de soluciones innovadoras de ingeniería e investigación de vanguardia.</p>
+      </section>
+      <section>
+         <ul class="flex font-semibold gap-2 justify-center lg:justify-start text-xs">
+            <li><a class="px-3 py-2 rounded-lg border-2 border-[#2f4277] bg-[#2f4277] text-white" href="#">Explorar Materias</a></li>
+            <li><a class="px-3 py-2 rounded-lg border-2 border-[#d6d6d6] bg-white" href="#">Programar Visita</a></li>
+         </ul>
+      </section>
+   </div>
+   <div class="lg:w-1/2 w-[80%] ">
+      <img src={studentImg.src} alt="Estudiante Ing. Sistemas" style="mask-image: linear-gradient(black 80%, transparent);">
+   </div>
+</section>

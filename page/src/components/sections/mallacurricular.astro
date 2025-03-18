@@ -1,0 +1,237 @@
+---
+import { materias, areas } from '../../data/materias';
+import MateriaCard from '../ui/materiaCard.astro';
+---
+<div class="flex flex-col items-center w-[80%] text-center space-y-2 pt-20 pb-10 mx-auto">
+  <h3 class="font-bold text-4xl">
+     Nuestra Malla Curricular
+  </h3>
+  <span class="text-[#5f5f5f]">
+     Materias integrales diseñadas para prepararte para los desafíos de la ingeniería moderna.
+  </span>
+</div>
+<div class="overflow-x-auto w-[100vw] font-inter">
+  <div class="mb-6 flex flex-wrap gap-2">
+    <button 
+      class="px-3 py-1 text-[10px] rounded-full bg-[#2f4277] text-white area-filter shadow-sm"
+      data-area="all"
+    >
+      Todas las áreas
+    </button>
+    {areas.map(area => (
+      <button 
+        class="px-3 py-1 text-[10px] rounded-full bg-[#fff] area-filter shadow-sm"
+        data-area={area.id}
+        style={`border-color: ${area.color}`}
+      >
+        {area.nombre}
+      </button>
+    ))}
+  </div>
+
+  <div class="mb-4 border-b text-[12px]">
+    <div class="flex space-x-1">
+      <button
+        class="px-4 py-2 border-b-2 border-primary font-medium tab-button"
+        data-tab="grid"
+      >
+        Vista de Malla
+      </button>
+      <button
+        class="px-4 py-2 text-muted-foreground tab-button"
+        data-tab="semester"
+      >
+        Vista por Semestre
+      </button>
+      <button
+        class="px-4 py-2 text-muted-foreground tab-button"
+        data-tab="area"
+      >
+        Vista por Área
+      </button>
+    </div>
+  </div>
+
+  <div class="tab-content text-[12px]" id="grid-tab">
+    <div class="min-w-[1200px]">
+      <div class="grid grid-cols-11 gap-1 mb-2 font-bold text-center text-white">
+        <div class="bg-[#2f4277] p-2 rounded-lg">ÁREAS</div>
+        {Array.from({ length: 10 }, (_, i) => (
+          <div class="bg-[#daa638] p-2 rounded-lg">
+            SEMESTRE {i + 1}
+          </div>
+        ))}
+      </div>
+
+      {areas.map(area => (
+        <div 
+          class="grid grid-cols-11 gap-1 mb-1 area-row"
+          data-area={area.id}
+        >
+          <div 
+            class="bg-gray-100 p-2 flex items-center justify-center text-center font-medium text-[10px]"
+            style={`border-left: 4px solid ${area.color}`}
+          >
+            {area.nombre}
+          </div>
+          
+          {Array.from({ length: 10 }, (_, semestre) => {
+            const materiasEnCelda = materias.filter(
+              m => m.area === area.id && m.semestre === semestre + 1
+            );
+            
+            return (
+              <div class="min-h-[100px] bg-gray-50">
+                {materiasEnCelda.map(materia => (
+                  <MateriaCard materia={materia} />
+                ))}
+              </div>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="tab-content hidden" id="semester-tab">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-10">
+      {Array.from({ length: 10 }, (_, i) => (
+        <div class="border rounded-lg p-4 border-gray-200 bg-[#ffffffa8] backdrop-blur-lg">
+          <h3 class="text-lg font-bold mb-3 text-center">Semestre {i + 1}</h3>
+          <div class="grid gap-2">
+            {materias
+              .filter(materia => materia.semestre === i + 1)
+              .map(materia => (
+                <MateriaCard 
+                  materia={materia} 
+                  class={`materia-card-semester materia-area-${materia.area}`} 
+                />
+              ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="tab-content hidden" id="area-tab">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-10">
+      {areas.map(area => (
+        <div 
+          class={`border rounded-lg p-4 border-gray-200 bg-[#ffffffa8] backdrop-blur-lg area-section`}
+          data-area={area.id}
+          style={`border-left: 4px solid ${area.color}`}
+        >
+          <h3 class="text-lg font-bold mb-3">{area.nombre}</h3>
+          <div class="grid gap-2">
+            {materias
+              .filter(materia => materia.area === area.id)
+              .map(materia => (
+                <MateriaCard materia={materia} />
+              ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Manejo de pestañas
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.getAttribute('data-tab');
+      
+      // Actualizar botones
+      tabButtons.forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabId) {
+          btn.classList.add('border-b-2', 'border-primary', 'font-medium');
+          btn.classList.remove('text-muted-foreground');
+        } else {
+          btn.classList.remove('border-b-2', 'border-primary', 'font-medium');
+          btn.classList.add('text-muted-foreground');
+        }
+      });
+      
+      // Actualizar contenido
+      tabContents.forEach(content => {
+        if (content.id === `${tabId}-tab`) {
+          content.classList.remove('hidden');
+        } else {
+          content.classList.add('hidden');
+        }
+      });
+    });
+  });
+  
+  // Filtrado por área
+  const areaFilters = document.querySelectorAll('.area-filter');
+  const areaRows = document.querySelectorAll('.area-row');
+  const areaSections = document.querySelectorAll('.area-section');
+  const materiaCardsSemester = document.querySelectorAll('.materia-card-semester');
+  
+  areaFilters.forEach(filter => {
+    filter.addEventListener('click', () => {
+      const areaId = filter.getAttribute('data-area');
+      
+      // Actualizar botones de filtro
+      areaFilters.forEach(btn => {
+        if (btn.getAttribute('data-area') === areaId) {
+          btn.classList.add('bg-[#2f4277]', 'text-white');
+          btn.classList.remove('bg-[#fff]');
+        } else {
+          btn.classList.remove('bg-[#2f4277]', 'text-white');
+          btn.classList.add('bg-[#fff]');
+        }
+      });
+      
+      // Filtrar filas en vista de malla
+      if (areaId === 'all') {
+        areaRows.forEach(row => {
+          row.classList.remove('opacity-40');
+        });
+      } else {
+        areaRows.forEach(row => {
+          if (row.getAttribute('data-area') === areaId) {
+            row.classList.remove('opacity-40');
+          } else {
+            row.classList.add('opacity-40');
+          }
+        });
+      }
+      
+      // Filtrar secciones en vista por área
+      if (areaId === 'all') {
+        areaSections.forEach(section => {
+          section.classList.remove('opacity-40');
+        });
+      } else {
+        areaSections.forEach(section => {
+          if (section.getAttribute('data-area') === areaId) {
+            section.classList.remove('opacity-40');
+          } else {
+            section.classList.add('opacity-40');
+          }
+        });
+      }
+      
+      // Filtrar materias en vista por semestre
+      if (areaId === 'all') {
+        materiaCardsSemester.forEach(card => {
+          card.classList.remove('hidden');
+        });
+      } else {
+        materiaCardsSemester.forEach(card => {
+          if (card.classList.contains(`materia-area-${areaId}`)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+    });
+  });
+</script>
+

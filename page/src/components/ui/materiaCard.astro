@@ -1,0 +1,61 @@
+---
+import { areas } from '../../data/materias';
+
+interface Props {
+  materia: {
+    codigo: string;
+    nombre: string;
+    semestre: number;
+    area: string;
+    descripcion: string;
+    prerequisitos: string[];
+  };
+  class?: string;
+}
+
+const { materia, class: className = '' } = Astro.props;
+const areaColor = areas.find(a => a.id === materia.area)?.color || '#ccc';
+---
+
+<div 
+  class={`materia-card p-2 rounded text-[12px] font-inter cursor-help border border-[#e2e2e2] bg-white relative group ${className} materia-area-${materia.area}`}
+  style={`border-left: 3px solid ${areaColor}`}
+>
+  <div class="font-medium text-[9px] text-[#868686]">{materia.codigo}</div>
+  <div class="text-[10px]">{materia.nombre}</div>
+  
+  <div class="tooltip absolute z-50 invisible group-hover:visible bg-[#ffffff] text-popover-foreground rounded-md p-3 shadow-md w-64 top-full left-0 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+    <h4 class="font-bold">{materia.nombre}</h4>
+    <p class="text-[10px] text-muted-foreground mb-1">{materia.codigo} - Semestre {materia.semestre}</p>
+    <p class="text-[12px]">{materia.descripcion}</p>
+    {materia.prerequisitos && materia.prerequisitos.length > 0 && (
+      <div class="mt-2">
+        <p class="text-[10px] font-medium">Prerequisitos:</p>
+        <ul class="text-[10px] list-disc pl-4">
+          {materia.prerequisitos.map(pre => (
+            <li>{pre}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</div>
+
+<style>
+  .tooltip {
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .group:hover .tooltip {
+    transform: translateY(0);
+  }
+  
+  /* Asegurarse de que el tooltip no se salga de la pantalla en el borde derecho */
+  .materia-card:nth-child(n+8) .tooltip {
+    left: auto;
+    right: 0;
+  }
+</style>
+

@@ -1,14 +1,12 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro"
+import Navbar from "../components/ui/navbar.astro"
+import MallaCurricular from "../components/sections/mallacurricular.astro";
 ---
 <div class="fixed left-0 top-0 -z-10 h-full w-full">
 	<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-[#fdab12] opacity-60 blur-[100px]"></div></div>
 </div>
-
 <Layout>
-	<Welcome />
+   <Navbar/>
+   <MallaCurricular/>
 </Layout>

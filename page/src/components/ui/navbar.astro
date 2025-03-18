@@ -1,0 +1,25 @@
+---
+import "../../styles/global.css"
+const links = [
+  { name: "Inicio", href: "/" },
+  { name: "Malla Curricular", href: "/materias" },
+  { name: "Docentes", href: "/docentes" },
+  { name: "¿Quienes Somos?", href: "/contacto" },
+];
+---
+
+<nav class="fixed bg-[#ffffff27] text-xs backdrop-blur-lg px-16 py-3 flex items-center z-10 w-full justify-between font-inter">
+  <div class="text-lg font-bold">🌐 Logo</div>
+  <ul class="flex space-x-8 text-black-300">
+    {links.map(link => (
+      <li>
+        <a href={link.href} class="hover:text-blue-500">
+          {link.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <div>
+      <a href="#">Login</a>
+  </div>
+</nav>

@@ -1,0 +1,206 @@
+[
+   {
+       "nombre": "AVERANGA GLORIA ZONIA",
+       "materia": [
+           {
+               "sigla": "FHC-226",
+               "materia": "Sacramentos y Espiritualidad",
+               "paralelo": "112",
+               "semestre": 4
+           }
+       ],
+       "img": "../../public/docentes/averanga.jpg"
+   },
+   {
+       "nombre": "VARGAS LUIS FERNANDO",
+       "materia": [
+           {
+               "sigla": "FHC-126",
+               "materia": "Moral Cristiana, Iglesia y Sociedad",
+               "paralelo": "131",
+               "semestre": 2
+           }
+       ],
+       "img": "../../public/docentes/vargas.jpg"
+   },
+   {
+       "nombre": "AGUILAR DURAN ARIEL NADDIR",
+       "materia": [
+           {
+               "sigla": "SIS-322",
+               "materia": "Teoría de los Sistemas de Información",
+               "paralelo": "111",
+               "semestre": 6
+           }
+       ],
+       "img": "../../public/docentes/aguilar.jpg"
+   },
+   {
+       "nombre": "AGUIRRE ROMERO ESTHER LILIAN",
+       "materia": [
+           {
+               "sigla": "FHC-126",
+               "materia": "Moral Cristiana, Iglesia y Sociedad",
+               "paralelo": "111",
+               "semestre": 2
+           }
+       ],
+       "img": "../../public/docentes/aguirre.jpg"
+   },
+   {
+       "nombre": "ALVAREZ VASQUEZ HERNAN RAMIRO",
+       "materia": [
+           {
+               "sigla": "SIS-123",
+               "materia": "Sistemas de Información Contable",
+               "paralelo": "131",
+               "semestre": 2
+           },
+           {
+               "sigla": "ING-221",
+               "materia": "Programación II",
+               "paralelo": "112",
+               "semestre": 4
+           }
+       ],
+       "img": "../../public/docentes/alvarez.jpg"
+   },
+   {
+       "nombre": "ANZE HURTADO PEDRO ANDRÉS",
+       "materia": [
+           {
+               "sigla": "MAT-124",
+               "materia": "Cálculo II",
+               "paralelo": "131",
+               "semestre": 2
+           },
+           {
+               "sigla": "RED-225",
+               "materia": "Sistemas Digitales",
+               "paralelo": "112",
+               "semestre": 4
+           }
+       ],
+       "img": "../../public/docentes/anze.jpg"
+   },
+   {
+       "nombre": "APAZA HUANCA SANDRA",
+       "materia": [
+           {
+               "sigla": "LIN-515",
+               "materia": "Optativa III",
+               "paralelo": "131",
+               "semestre": 9
+           }
+       ],
+       "img": "../../public/docentes/apaza.jpg"
+   },
+   {
+       "nombre": "APAZA ATAHUACHI MARIBEL",
+       "materia": [
+           {
+               "sigla": "MAT-314",
+               "materia": "Análisis Numérico",
+               "paralelo": "111",
+               "semestre": 5
+           },
+           {
+               "sigla": "INV-426",
+               "materia": "Metodología de la Investigación II",
+               "paralelo": "112",
+               "semestre": 8
+           },
+           {
+               "sigla": "INV-516",
+               "materia": "Taller de Grado I",
+               "paralelo": "127",
+               "semestre": 9
+           },
+           {
+               "sigla": "INV-525",
+               "materia": "Taller de Grado II",
+               "paralelo": "144",
+               "semestre": 10
+           }
+       ],
+       "img": "../../public/docentes/maribel.jpg"
+   },
+   {
+       "nombre": "ARANIBAR ORTIZ JOSE FRANCISCO",
+       "materia": [
+           {
+               "sigla": "RED-225",
+               "materia": "Sistemas Digitales",
+               "paralelo": "111",
+               "semestre": 4
+           }
+       ],
+       "img": "../../public/docentes/aranibar.jpg"
+   },
+   {
+       "nombre": "ARDUZ GUZMAN ANA CARINA",
+       "materia": [
+           {
+               "sigla": "MAT-112",
+               "materia": "Álgebra",
+               "paralelo": "111",
+               "semestre": 1
+           }
+       ],
+       "img": "../../public/docentes/arduz.jpg"
+   },
+   {
+       "nombre": "ARGANDOÑA ARGANDOÑA RAMON",
+       "materia": [
+           {
+               "sigla": "FHC-216",
+               "materia": "Biblia y Vida Cristiana",
+               "paralelo": "111",
+               "semestre": 3
+           }
+       ],
+       "img": "../../public/docentes/silueta.jpg"
+   },
+   {
+       "nombre": "SAAVEDRA SALAZAR CARLOS PEDRO",
+       "materia": [
+           {
+               "sigla": "SIS-421",
+               "materia": "Programación en Internet",
+               "paralelo": "111",
+               "semestre": 7
+           }
+       ],
+       "img": "../../public/docentes/saavedra.jpg"
+   },
+   {
+       "nombre": "BLANCO VELASQUEZ ANGELA RAQUEL",
+       "materia": [
+           {
+               "sigla": "FHC-126",
+               "materia": "Moral Cristiana, Iglesia y Sociedad",
+               "paralelo": "112",
+               "semestre": 2
+           }
+       ],
+       "img": "../../public/docentes/blanco.jpg"
+   },
+   {
+       "nombre": "BUSTILLOS GABRIEL ANA OFELIA",
+       "materia": [
+           {
+               "sigla": "SIS-122",
+               "materia": "Introducción a los Sistemas Administrativos",
+               "paralelo": "112",
+               "semestre": 2
+           },
+           {
+               "sigla": "SIM-424",
+               "materia": "Ingenieria de Sistemas I",
+               "paralelo": "111",
+               "semestre": 8
+           }
+       ],
+       "img": "../../public/docentes/bustillos.jpg"
+   }
+]

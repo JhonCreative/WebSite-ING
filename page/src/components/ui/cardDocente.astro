@@ -1,0 +1,31 @@
+---
+import docentesData from "../../data/docentes.json";
+import schollIcon from '../../assets/icons/school.svg';
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-inter">
+  {docentesData.map((docente) => (
+    <div class="bg-[#ffffff77] border-3 rounded-lg p-6 flex flex-col items-center border-[#ebebeb] backdrop-blur-lg">
+      <img 
+        src={docente.img}
+        alt={docente.nombre} 
+        class="w-32 h-32 rounded-full object-cover mb-4"
+      />
+      <h2 class="text-[15px] font-bold capitalize truncate text-[#27365f]">{docente.nombre}</h2>
+      <ul class="mt-2  w-full">
+        {docente.materia.map((materia) => (
+          <li class="mb-2 flex justify-between">
+            <div class="flex gap-1.5 items-center">
+              <svg  xmlns="http://www.w3.org/2000/svg"  width="13"  height="13"  viewBox="0 0 24 24"  fill="none"  stroke="#505050"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-school"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></svg>
+              <span class="font-semibold text-[#505050] text-[11px]">{materia.materia}</span>
+            </div>
+            <div class="flex justify-center items-center text-[#949494]">
+              <span class="font-semibold text-[11px]">{materia.sigla}</span>
+              <span class="font-semibold text-[11px]">{materia.semestre} SEM</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>

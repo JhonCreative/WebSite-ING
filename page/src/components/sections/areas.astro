@@ -1,0 +1,46 @@
+---
+import { materias, areas } from '../../data/materias';
+import AreaCard from '../ui/areaCard.astro';
+
+// Calcular estadísticas para cada área
+const estadisticasAreas = areas.map(area => {
+  const materiasDelArea = materias.filter(m => m.area === area.id);
+  
+  // Contar materias por semestre para esta área
+  const materiasPorSemestre = Array(10).fill(0);
+  materiasDelArea.forEach(m => {
+    materiasPorSemestre[m.semestre - 1]++;
+  });
+  
+  // Encontrar el semestre con más materias
+  const semestreConMasMaterias = materiasPorSemestre.indexOf(Math.max(...materiasPorSemestre)) + 1;
+  
+  return {
+    ...area,
+    totalMaterias: materiasDelArea.length,
+    semestreConMasMaterias,
+    materiasPorSemestre
+  };
+});
+---
+
+<section class="h-full w-full flex flex-col items-center font-inter justify-center">
+   <div class="flex flex-col items-center w-[80%] text-center space-y-2">
+      <div class="inline-block rounded-lg bg-[#fff] px-3 py-1 text-sm text-secondary-foreground">
+         Excelencia Académica
+      </div>
+      <h3 class="font-bold text-4xl">
+         Nuestras Áreas
+      </h3>
+      <span class="text-[#5f5f5f]">
+         Áreas integrales diseñadas para prepararte para los desafíos de la ingeniería moderna.
+      </span>
+   </div>
+   <div class="mt-8 mb-8 w-[80%]">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {estadisticasAreas.map(area => (
+          <AreaCard area={area} />
+        ))}
+      </div>
+    </div>
+</section>
