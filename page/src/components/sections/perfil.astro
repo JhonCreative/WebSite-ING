@@ -1,9 +1,14 @@
-<section class="w-full py-12 md:py-24 lg:py-32" id="profile">
-   <div class="container px-4 md:px-6 mx-auto">
+---
+import check from "../../assets/icons/check.svg";
+import seminarios from "../../assets/images/seminarios.png";
+---
+
+<section class="w-full py-12 md:py-24 lg:py-32 font-inter" id="profile">
+   <div class="container px-4 md:px-6 mx-auto w-[80%]">
      <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
        <div class="space-y-2">
-         <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Perfil Profesional y Convalidaciones</h2>
-         <p class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+         <h2 class="text-3xl font-bold  sm:text-4xl">Perfil Profesional y Convalidaciones</h2>
+         <p class="text-[#5f5f5f]">
            Formamos profesionales integrales preparados para los desafíos tecnológicos del futuro.
          </p>
        </div>
@@ -11,66 +16,72 @@
      
      <!-- Perfil Profesional -->
      <div class="grid gap-8 md:grid-cols-2 mb-16">
-       <div class="rounded-lg bg-card border border-primary/10 shadow-sm overflow-hidden">
+       <div class="rounded-lg overflow-hidden items-center text-center p-6 border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
          <div class="bg-primary/10 p-6">
            <div class="flex items-center mb-4">
              <!-- <Icon name="user" class="h-6 w-6 text-primary mr-2" /> -->
-             <h3 class="text-xl font-bold">Perfil Profesional</h3>
+             <h3 class="text-lg font-bold">Perfil Profesional</h3>
            </div>
-           <p class="text-muted-foreground mb-4">
+           <p class=" mb-4">
              El Ingeniero de Sistemas formado en nuestra universidad es un profesional con sólidos conocimientos técnicos y habilidades para:
            </p>
-           <ul class="space-y-3">
+           <ul class="space-y-3 text-[12px]">
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <span>Diseñar, implementar y gestionar sistemas de información y tecnologías computacionales.</span>
              </li>
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <span>Desarrollar soluciones de software utilizando metodologías ágiles y buenas prácticas de ingeniería.</span>
              </li>
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <span>Administrar infraestructuras tecnológicas y redes de comunicación.</span>
              </li>
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <span>Aplicar inteligencia artificial, ciencia de datos y tecnologías emergentes.</span>
              </li>
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <span>Liderar equipos multidisciplinarios y gestionar proyectos tecnológicos.</span>
              </li>
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <span>Innovar y emprender en el ámbito tecnológico con visión ética y responsable.</span>
              </li>
            </ul>
          </div>
        </div>
        
-       <div class="rounded-lg bg-card border border-primary/10 shadow-sm overflow-hidden">
+       <div class="rounded-lg overflow-hidden items-center text-center p-6 border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
          <div class="bg-primary/10 p-6">
            <div class="flex items-center mb-4">
              <!-- <Icon name="briefcase" class="h-6 w-6 text-primary mr-2" /> -->
-             <h3 class="text-xl font-bold">Perfil Laboral</h3>
+             <h3 class="text-lg font-bold">Perfil Laboral</h3>
            </div>
-           <p class="text-muted-foreground mb-4">
+           <p class=" mb-4">
              Nuestros egresados están capacitados para desempeñarse exitosamente en diversos ámbitos profesionales:
            </p>
            <div class="grid gap-4 md:grid-cols-2">
              <div class="rounded-lg bg-background p-4">
                <h4 class="font-bold mb-2">Empresas de Tecnología</h4>
                <ul class="space-y-1 text-sm">
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Desarrollador de Software</span>
                  </li>
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Arquitecto de Soluciones</span>
                  </li>
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>DevOps Engineer</span>
                  </li>
@@ -79,15 +90,15 @@
              <div class="rounded-lg bg-background p-4">
                <h4 class="font-bold mb-2">Consultoría</h4>
                <ul class="space-y-1 text-sm">
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Consultor Tecnológico</span>
                  </li>
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Analista de Sistemas</span>
                  </li>
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Gestor de Proyectos IT</span>
                  </li>
@@ -96,15 +107,15 @@
              <div class="rounded-lg bg-background p-4">
                <h4 class="font-bold mb-2">Sector Público y Privado</h4>
                <ul class="space-y-1 text-sm">
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>CIO / CTO</span>
                  </li>
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Administrador de Sistemas</span>
                  </li>
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Analista de Ciberseguridad</span>
                  </li>
@@ -113,15 +124,15 @@
              <div class="rounded-lg bg-background p-4">
                <h4 class="font-bold mb-2">Emprendimiento</h4>
                <ul class="space-y-1 text-sm">
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Fundador de Startups</span>
                  </li>
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Desarrollador Independiente</span>
                  </li>
-                 <li class="flex items-center">
+                 <li class="flex items-center text-[12px]">
                    <!-- <Icon name="arrow-right" class="h-4 w-4 text-primary mr-1" /> -->
                    <span>Consultor Freelance</span>
                  </li>
@@ -133,10 +144,10 @@
      </div>
      
      <!-- Convalidaciones -->
-     <div class="rounded-lg bg-card border border-primary/10 shadow-sm p-8 mb-16">
+     <div class="rounded-lg overflow-hidden items-center text-center p-6 border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
        <div class="flex items-center justify-center mb-6">
          <!-- <Icon name="repeat" class="h-8 w-8 text-primary mr-2" /> -->
-         <h3 class="text-2xl font-bold">Convalidaciones</h3>
+         <h3 class="text-xl font-bold">Convalidaciones</h3>
        </div>
        
        <div class="grid gap-8 md:grid-cols-2">
@@ -145,30 +156,34 @@
            <ul class="space-y-3">
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <div>
                  <span class="font-medium">Certificado de Calificaciones</span>
-                 <p class="text-sm text-muted-foreground">Original de la institución de origen</p>
+                 <p class="text-sm ">Original de la institución de origen</p>
                </div>
              </li>
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <div>
                  <span class="font-medium">Contenidos Programáticos</span>
-                 <p class="text-sm text-muted-foreground">De las asignaturas a convalidar, sellados y firmados</p>
+                 <p class="text-sm ">De las asignaturas a convalidar, sellados y firmados</p>
                </div>
              </li>
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <div>
                  <span class="font-medium">Calificación Mínima</span>
-                 <p class="text-sm text-muted-foreground">70/100 o equivalente en la asignatura a convalidar</p>
+                 <p class="text-sm ">70/100 o equivalente en la asignatura a convalidar</p>
                </div>
              </li>
              <li class="flex items-start">
                <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
                <div>
                  <span class="font-medium">Coincidencia Curricular</span>
-                 <p class="text-sm text-muted-foreground">Mínimo 80% de similitud en contenidos y carga horaria</p>
+                 <p class="text-sm ">Mínimo 80% de similitud en contenidos y carga horaria</p>
                </div>
              </li>
            </ul>
@@ -183,7 +198,7 @@
                </div>
                <div>
                  <p class="font-medium">Solicitud formal</p>
-                 <p class="text-sm text-muted-foreground">Presentar formulario de solicitud en Dirección de Carrera</p>
+                 <p class="text-sm ">Presentar formulario de solicitud en Dirección de Carrera</p>
                </div>
              </li>
              <li class="flex">
@@ -192,7 +207,7 @@
                </div>
                <div>
                  <p class="font-medium">Evaluación académica</p>
-                 <p class="text-sm text-muted-foreground">Análisis de documentación por comité académico</p>
+                 <p class="text-sm ">Análisis de documentación por comité académico</p>
                </div>
              </li>
              <li class="flex">
@@ -201,7 +216,7 @@
                </div>
                <div>
                  <p class="font-medium">Dictamen</p>
-                 <p class="text-sm text-muted-foreground">Resolución de convalidación en un plazo de 15 días hábiles</p>
+                 <p class="text-sm ">Resolución de convalidación en un plazo de 15 días hábiles</p>
                </div>
              </li>
              <li class="flex">
@@ -210,7 +225,7 @@
                </div>
                <div>
                  <p class="font-medium">Registro académico</p>
-                 <p class="text-sm text-muted-foreground">Incorporación de asignaturas convalidadas al historial académico</p>
+                 <p class="text-sm ">Incorporación de asignaturas convalidadas al historial académico</p>
                </div>
              </li>
            </ol>
@@ -226,10 +241,10 @@
      </div>
      
      <!-- Pasantías -->
-     <div class="rounded-lg bg-card border border-primary/10 shadow-sm overflow-hidden">
+     <div class="rounded-lg overflow-hidden items-center text-center p-6 border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
        <div class="relative h-48">
          <img 
-           src="/placeholder.svg?height=400&width=1200&text=Pasantías" 
+           src={seminarios.src} 
            alt="Estudiantes en pasantías"
            class="w-full h-full object-cover"
          />
@@ -241,7 +256,7 @@
        </div>
        
        <div class="p-6">
-         <p class="text-muted-foreground mb-6">
+         <p class=" mb-6">
            Nuestro programa de pasantías ofrece a los estudiantes la oportunidad de aplicar sus conocimientos en entornos laborales reales, 
            desarrollar habilidades profesionales y establecer contactos en la industria tecnológica.
          </p>
@@ -290,7 +305,7 @@
                </div>
                <div>
                  <h5 class="font-medium">Experiencia Práctica</h5>
-                 <p class="text-sm text-muted-foreground">Aplicación de conocimientos teóricos en entornos laborales reales</p>
+                 <p class="text-sm ">Aplicación de conocimientos teóricos en entornos laborales reales</p>
                </div>
              </div>
              <div class="flex items-start">
@@ -299,7 +314,7 @@
                </div>
                <div>
                  <h5 class="font-medium">Networking Profesional</h5>
-                 <p class="text-sm text-muted-foreground">Establecimiento de contactos en la industria tecnológica</p>
+                 <p class="text-sm ">Establecimiento de contactos en la industria tecnológica</p>
                </div>
              </div>
              <div class="flex items-start">
@@ -308,7 +323,7 @@
                </div>
                <div>
                  <h5 class="font-medium">Posibilidades de Empleo</h5>
-                 <p class="text-sm text-muted-foreground">Muchos pasantes son contratados por las empresas al finalizar</p>
+                 <p class="text-sm ">Muchos pasantes son contratados por las empresas al finalizar</p>
                </div>
              </div>
              <div class="flex items-start">
@@ -317,14 +332,14 @@
                </div>
                <div>
                  <h5 class="font-medium">Créditos Académicos</h5>
-                 <p class="text-sm text-muted-foreground">Las pasantías otorgan créditos válidos para tu plan de estudios</p>
+                 <p class="text-sm ">Las pasantías otorgan créditos válidos para tu plan de estudios</p>
                </div>
              </div>
            </div>
          </div>
          
          <div class="mt-8 flex justify-center">
-           <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4">
+           <a href="../../pages/contacto.astro" class="inline-flex bg-blue-950 text-white items-center justify-center rounded-md text-[13px] h-10 py-2 px-4 w-full">
              Solicitar Información sobre Pasantías
            </a>
          </div>

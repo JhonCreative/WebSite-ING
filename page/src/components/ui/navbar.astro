@@ -4,14 +4,17 @@ import logoING from "../../assets/logoING.png";
 const links = [
   { name: "Inicio", href: "/" },
   { name: "Malla Curricular", href: "/materias" },
+  { name: "Informaciones", href: "/recursos" },
   { name: "Docentes", href: "/docentes" },
-  { name: "¿Quienes Somos?", href: "/contacto" },
+  { name: "Trayectoria", href: "/trayectoria" },
+  { name: "¿Quienes Somos?", href: "/about" },
+  { name: "Contacto", href: "/contacto" },
 ];
 ---
 
 <nav class="fixed bg-[#ffffff27] text-xs backdrop-blur-lg px-16 py-3 flex items-center z-10 w-full justify-between font-inter">
   <div class="text-lg font-bold">
-    <img src={logoING.src} alt="" class="w-7 h-auto">
+    <img src={logoING.src} alt="" class="w-20 h-auto">
   </div>
   <ul class="flex space-x-8 text-black-300">
     {links.map(link => (
