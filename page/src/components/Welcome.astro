@@ -7,6 +7,9 @@ import Mision from "./sections/mision.astro";
 import Actividades from "./sections/actividades.astro";
 import Infraestructura from "./sections/infraestructura.astro";
 import Autoridades from "./sections/autoridades.astro";
+import Costos from "./sections/costos.astro";
+import Perfil from "./sections/perfil.astro";
+import Footer from "./sections/footer.astro";
 ---
 
 <section class="">
@@ -17,4 +20,27 @@ import Autoridades from "./sections/autoridades.astro";
 	<Actividades/>
 	<Infraestructura/>
 	<Autoridades/>
+	<Costos/>
+	<Perfil/>
+	<section class="w-full py-12 md:py-24 lg:py-32 bg-secondary/30" id="cta">
+      <div class="container px-4 md:px-6 mx-auto">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">¿Listo para Dar Forma al Futuro?</h2>
+            <p class="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Únete a nuestra comunidad de innovadores y solucionadores de problemas en ingeniería de sistemas.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2 min-[400px]:flex-row">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4">
+              Solicitar Admisión
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input hover:bg-primary/10 border-primary/20 h-10 py-2 px-4">
+              Solicitar Información
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+	 <Footer/>
 </section>
