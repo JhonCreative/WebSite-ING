@@ -1,0 +1,89 @@
+<section class="w-full py-12 md:py-24 lg:py-24 font-inter" id="rectors">
+   <div class="container px-4 md:px-6 mx-auto w-[80%]">
+     <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+       <div class="space-y-2">
+         <h2 class="text-3xl font-bold sm:text-4xl">Nuestras Autoridades</h2>
+         <p class="text-[#5f5f5f]">
+           Líderes visionarios que guían nuestra institución hacia la excelencia académica.
+         </p>
+       </div>
+     </div>
+     
+     <!-- Rectores (4 autoridades) -->
+     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
+       {[
+         { 
+           img: "../../../public/autoridades/canciller.jpg",
+           name: "M. Sc. P. Marcelo Escalante Mendoza. sdb", 
+           title: "Canciller", 
+           description: "Doctor en Ciencias de la Computación por el MIT, con más de 25 años de experiencia en educación superior e investigación."
+         },
+         { 
+           img: "../../../public/autoridades/rector.jpg",
+           name: "M. Sc. Carlos Urcino Aquino Rubin de Celis", 
+           title: "Rector", 
+           description: "Doctora en Educación por Harvard, especialista en innovación educativa y gestión académica."
+         },
+         { 
+           img: "../../../public/autoridades/vicerrectora.jpg",
+           name: "Lic. Susan Mabel Vargas Salazar", 
+           title: "Vicerrectora Académica y de Investigación", 
+           description: "Doctor en Ingeniería por Stanford, con amplia trayectoria en proyectos de investigación e innovación."
+         },
+         { 
+           img: "../../../public/autoridades/vicerrectora2.jpg",
+           name: "Lic. Erika Gabriela Rojas Silva", 
+           title: "Vicerrectora Pastoral y Oratorio Universitario", 
+           description: "Doctora en Administración por Wharton, experta en gestión universitaria y planificación estratégica."
+         }
+       ].map((authority) => (
+         <div class="flex flex-col rounded-lg items-center text-center p-6 border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
+           <div class="w-40 h-40 rounded-full bg-secondary/30 p-1 mb-4 overflow-hidden">
+             <img 
+               src={authority.img}
+               alt={authority.name}
+               class="w-full h-full rounded-full object-cover"
+             />
+           </div>
+           <div class="inline-block rounded-lg bg-[#cfcfcf] px-3 py-1 text-[11px] text-primary mb-2">
+             {authority.title}
+           </div>
+           <h3 class="text-[13px] font-bold mb-2">{authority.name}</h3>
+           <p class="text-[12px] text-muted-foreground">
+             {authority.description}
+           </p>
+         </div>
+       ))}
+     </div>
+     
+     <!-- Director de Carrera (sección separada) -->
+     <div class="rounded-lg p-8 mb-12 border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
+       <h3 class="text-xl font-bold text-center mb-8">Director de la Carrera de Ingeniería de Sistemas</h3>
+       
+       <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+         <div class="w-48 h-48 rounded-full bg-secondary/30 p-1 flex-shrink-0 overflow-hidden">
+           <img 
+             src="../../../public/autoridades/director.jpg" 
+             alt="Director de Carrera"
+             class="w-full h-full rounded-full object-cover"
+           />
+         </div>
+         
+         <div class="flex-1">
+           <h4 class="text-[14px] font-bold mb-2">Ing. Jesús Rocha Vera</h4>
+           <p class="text-[12px] text-muted-foreground mb-2">
+             Ingeniero de Sistemas de la Universidad Salesiana de Bolivia
+           </p>
+           <p class="text-[12px] mb-4">
+             Con más de 15 años de experiencia en la industria tecnológica y la academia, el Ing. Rocha ha liderado 
+             importantes proyectos de investigación en sistemas inteligentes y computación distribuida. Como Director 
+             de la Carrera de Ingeniería de Sistemas, ha impulsado la renovación curricular, la internacionalización 
+             del programa y el fortalecimiento de los vínculos con la industria.
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ 

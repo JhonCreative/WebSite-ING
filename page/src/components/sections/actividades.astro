@@ -1,0 +1,224 @@
+---
+import bookopen from "../../assets/icons/book-open.svg";
+import trophy from "../../assets/icons/trophy.svg";
+import check from "../../assets/icons/check.svg";
+import world from "../../assets/icons/world.svg";
+import heart from "../../assets/icons/heart.svg";
+import calendar from "../../assets/icons/calendar.svg";
+import voluntariado from "../../assets/images/voluntariado.png";
+import seminarios from "../../assets/images/seminarios.png";
+import actividades from "../../assets/images/actividades.png";
+---
+
+<section class="w-full py-12 md:py-24 lg:py-32 font-inter" id="activities">
+   <div class="container  mx-auto w-[80%]">
+     <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+       <div class="space-y-2">
+         <h2 class="text-3xl font-bold sm:text-4xl">Actividades</h2>
+         <p class="text-[#5f5f5f]">
+           Formación integral a través de actividades curriculares y extracurriculares.
+         </p>
+       </div>
+     </div>
+     
+     <div class="grid gap-8 md:grid-cols-2">
+       <div class="border-2 border-[#d6d6d6] rounded-lg shadow-sm bg-white opacity-80 backdrop-blur-lg overflow-hidden">
+         <div class="p-6 bg-primary/5">
+           <div class="flex items-center justify-between mb-4">
+             <h3 class="text-sm font-bold">Actividades Curriculares</h3>
+             <!-- <Icon name="book-open" class="h-8 w-8 text-primary" /> -->
+              <img src={bookopen.src} alt="">
+           </div>
+           <p class="text-[12px] mb-6">
+             Actividades académicas que complementan la formación profesional y fortalecen las competencias específicas de la carrera.
+           </p>
+           <div class="space-y-4">
+             {[
+               {
+                 title: "Proyectos Integradores",
+                 description: "Desarrollo de soluciones tecnológicas para problemas reales en colaboración con empresas e instituciones."
+               },
+               {
+                 title: "Seminarios Especializados",
+                 description: "Sesiones intensivas sobre temas emergentes en ingeniería de sistemas impartidos por expertos del sector."
+               },
+               {
+                 title: "Prácticas Profesionales",
+                 description: "Experiencia laboral supervisada en empresas tecnológicas y organizaciones relacionadas con la carrera."
+               },
+               {
+                 title: "Talleres Técnicos",
+                 description: "Formación práctica en herramientas, lenguajes de programación y metodologías actuales."
+               },
+             ].map((activity) => (
+               <div class="flex items-start">
+                 <div class="rounded-full bg-primary/10 p-1 mr-3 mt-0.5">
+                   <!-- <Icon name="check" class="h-4 w-4 text-primary" /> -->
+                   <img src={check.src} alt="" class="h-4 w-4">
+                 </div>
+                 <div>
+                   <h4 class="font-bold text-[13px]">{activity.title}</h4>
+                   <p class="text-sm text-[12px]">{activity.description}</p>
+                 </div>
+               </div>
+             ))}
+           </div>
+         </div>
+         <div class="p-6 flex justify-center">
+           <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4">
+             Solicitar Información
+           </a>
+         </div>
+       </div>
+       
+       <div class="border-2 border-[#d6d6d6] rounded-lg shadow-sm bg-white opacity-80 backdrop-blur-lg overflow-hidden">
+         <div class="p-6 bg-primary/5">
+           <div class="flex items-center justify-between mb-4">
+             <h3 class="text-sm font-bold">Actividades Extracurriculares</h3>
+             <!-- <Icon name="trophy" class="h-8 w-8 text-primary" /> -->
+             <img src={trophy.src} alt="">
+           </div>
+           <p class="text-[12px] mb-6">
+             Actividades complementarias que promueven el desarrollo integral, habilidades sociales y bienestar de los estudiantes.
+           </p>
+           <div class="space-y-4">
+             {[
+               {
+                 title: "Clubes Tecnológicos",
+                 description: "Grupos estudiantiles enfocados en robótica, desarrollo de videojuegos, ciberseguridad y más."
+               },
+               {
+                 title: "Competencias de Programación",
+                 description: "Participación en maratones de programación, hackathons y concursos nacionales e internacionales."
+               },
+               {
+                 title: "Actividades Deportivas",
+                 description: "Equipos de fútbol, baloncesto, voleibol y atletismo que representan a la universidad en torneos."
+               },
+               {
+                 title: "Grupos Culturales",
+                 description: "Coro, teatro, danza y otras expresiones artísticas para el desarrollo cultural de los estudiantes."
+               },
+             ].map((activity) => (
+               <div class="flex items-start">
+                 <div class="rounded-full bg-primary/10 p-1 mr-3 mt-0.5">
+                   {/* <Icon name="check" class="h-4 w-4 text-primary" /> */}
+                   <img src={check.src} alt="" class="h-4 w-4">
+                 </div>
+                 <div>
+                   <h4 class="font-bold text-[13px]">{activity.title}</h4>
+                   <p class="text-sm text-[12px]">{activity.description}</p>
+                 </div>
+               </div>
+             ))}
+           </div>
+         </div>
+         <div class="p-6 flex justify-center">
+           <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4">
+             Unirse a un Club
+           </a>
+         </div>
+       </div>
+     </div>
+     
+     <div class="mt-12 grid gap-6 md:grid-cols-3">
+       <div class="border-2 border-[#d6d6d6] rounded-lg shadow-sm bg-white opacity-80 backdrop-blur-lg overflow-hidden">
+         <div class="relative h-48">
+           <img 
+             src={actividades.src} 
+             alt="Eventos anuales"
+             class="w-full h-full object-cover"
+           />
+           <div class="absolute inset-0 flex items-center justify-center">
+             <h3 class="text-xl font-bold px-4 py-2 text-white">Eventos Anuales</h3>
+           </div>
+         </div>
+         <div class="p-4">
+           <ul class="space-y-2 text-sm">
+             <li class="flex items-center">
+               {/* <Icon name="calendar" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={calendar.src} alt="" class="h-3 w-3 mr-2">
+               <span>Semana de la Ingeniería</span>
+             </li>
+             <li class="flex items-center">
+               {/* <Icon name="calendar" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={calendar.src} alt="" class="h-3 w-3 mr-2">
+               <span>Feria de Proyectos</span>
+             </li>
+             <li class="flex items-center">
+               {/* <Icon name="calendar" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={calendar.src} alt="" class="h-3 w-3 mr-2">
+               <span>Congreso de Innovación</span>
+             </li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="border-2 border-[#d6d6d6] rounded-lg shadow-sm bg-white opacity-80 backdrop-blur-lg overflow-hidden">
+         <div class="relative h-48">
+           <img 
+             src={seminarios.src} 
+             alt="Programas de intercambio"
+             class="w-full h-full object-cover"
+           />
+           <div class="absolute inset-0 flex items-center justify-center">
+             <h3 class="text-xl font-bold px-4 py-2 text-white">Seminarios</h3>
+           </div>
+         </div>
+         <div class="p-4">
+           <ul class="space-y-2 text-sm">
+             <li class="flex items-center">
+               {/* <Icon name="globe" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={world.src} alt="" class="h-3 w-3 mr-2">
+               <span>Programas de movilidad internacional</span>
+             </li>
+             <li class="flex items-center">
+               {/* <Icon name="globe" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={world.src} alt="" class="h-3 w-3 mr-2">
+               <span>Estancias de investigación</span>
+             </li>
+             <li class="flex items-center">
+               {/* <Icon name="globe" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={world.src} alt="" class="h-3 w-3 mr-2">
+               <span>Doble titulación</span>
+             </li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="border-2 border-[#d6d6d6] rounded-lg shadow-sm bg-white opacity-80 backdrop-blur-lg  overflow-hidden">
+         <div class="relative h-48">
+           <img 
+             src={voluntariado.src} 
+             alt="Programas de voluntariado"
+             class="w-full h-full object-cover"
+           />
+           <div class="absolute inset-0  flex items-center justify-center">
+             <h3 class="text-xl font-bold px-4 py-2 text-white">Voluntariado</h3>
+           </div>
+         </div>
+         <div class="p-4">
+           <ul class="space-y-2 text-sm">
+             <li class="flex items-center">
+               {/* <Icon name="heart" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={heart.src} alt="" class="h-3 w-3 mr-2">
+               <span>Proyectos sociales</span>
+             </li>
+             <li class="flex items-center">
+               {/* <Icon name="heart" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={heart.src} alt="" class="h-3 w-3 mr-2">
+               <span>Alfabetización digital</span>
+             </li>
+             <li class="flex items-center">
+               {/* <Icon name="heart" class="mr-2 h-4 w-4 text-primary" /> */}
+               <img src={heart.src} alt="" class="h-3 w-3 mr-2">
+               <span>Apoyo comunitario</span>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ 

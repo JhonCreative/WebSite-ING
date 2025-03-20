@@ -1,0 +1,176 @@
+---
+import check from "../../assets/icons/check.svg";
+import aulas from "../../assets/images/aula.jpg";
+import cafeteria from "../../assets/images/cafeteria.jpg";
+import biblioteca from "../../assets/images/biblioteca.jpg";
+import auditorio from "../../assets/images/auditorio.jpeg";
+import laboratorio from "../../assets/images/laboratorio.jpg";
+---
+
+<section class="w-full py-12 md:py-24 lg:py-32 font-inter" id="facilities">
+   <div class="container px-4 md:px-6 mx-auto w-[80%]">
+     <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+       <div class="space-y-2">
+         <h2 class="text-3xl font-bold sm:text-4xl">Nuestras Instalaciones</h2>
+         <p class="text-[#5f5f5f]">
+           Espacios modernos y equipados para una experiencia educativa de excelencia.
+         </p>
+       </div>
+     </div>
+     
+     <div class="grid gap-8 md:grid-cols-3">
+       <div class="flex flex-col rounded-lg overflow-hidden border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
+         <div class="relative h-48">
+           <img 
+             src={aulas.src} 
+             alt="Aulas modernas"
+             class="w-full h-full object-cover"
+           />
+           <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+             <h3 class="text-[14px] font-bold bg-gray-50 px-4 py-2 rounded-md">Aulas</h3>
+           </div>
+         </div>
+         <div class="p-6 flex-1">
+           <ul class="space-y-2 text-[12px]">
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+                <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>30 aulas equipadas con tecnología audiovisual</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+                <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Capacidad para 40 estudiantes por aula</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+                <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Sistemas de climatización y acústica óptimos</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Conectividad Wi-Fi de alta velocidad</span>
+             </li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="flex flex-col rounded-lg overflow-hidden border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
+         <div class="relative h-48">
+           <img 
+             src={cafeteria.src} 
+             alt="Laboratorios de ingeniería"
+             class="w-full h-full object-cover"
+           />
+           <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+             <h3 class="text-[14px] font-bold  bg-gray-50 px-4 py-2 rounded-md">Cafetería</h3>
+           </div>
+         </div>
+         <div class="p-6 flex-1">
+           <ul class="space-y-2 text-[12px]">
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Cafetería amplia y espaciosa</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Mesas de recreación</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Servicios básicos de alimentos</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Centro de carga</span>
+             </li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="flex flex-col rounded-lg overflow-hidden border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
+         <div class="relative h-48">
+           <img 
+             src={biblioteca.src} 
+             alt="Biblioteca universitaria"
+             class="w-full h-full object-cover"
+           />
+           <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+             <h3 class="text-[14px] font-bold bg-gray-50 px-4 py-2 rounded-md">Biblioteca</h3>
+           </div>
+         </div>
+         <div class="p-6 flex-1">
+           <ul class="space-y-2 text-[12px]">
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Más de 50,000 volúmenes especializados</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Acceso a bases de datos científicas</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Salas de estudio individual y grupal</span>
+             </li>
+             <li class="flex items-start">
+               <!-- <Icon name="check" class="h-5 w-5 text-primary mr-2 mt-0.5" /> -->
+               <img src={check.src} alt="" class="h-4 w-4 mr-2 mt-0.5">
+               <span>Servicio de préstamo interbibliotecario</span>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     
+     <div class="mt-12 grid gap-6 md:grid-cols-2">
+       <div class="rounded-lg overflow-hidden border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
+         <div class="relative h-64">
+           <img 
+             src={auditorio.src} 
+             alt="Auditorio principal"
+             class="w-full h-full object-cover"
+           />
+           <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+             <h3 class="text-[14px] font-bold bg-gray-50 px-4 py-2 rounded-md">Auditorio</h3>
+           </div>
+         </div>
+         <div class="p-6">
+           <p class="text-[12px]">
+             Nuestro auditorio principal tiene capacidad para 500 personas y está equipado con sistemas audiovisuales 
+             de última generación, ideal para conferencias, seminarios y eventos académicos.
+           </p>
+         </div>
+       </div>
+       
+       <div class="rounded-lg overflow-hidden border-2 border-[#d6d6d6] shadow-sm bg-white opacity-80 backdrop-blur-lg">
+         <div class="relative h-64">
+           <img 
+             src={laboratorio.src} 
+             alt="Centro de cómputo"
+             class="w-full h-full object-cover"
+           />
+           <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+             <h3 class="text-[14px] font-bold  bg-gray-50 px-4 py-2 rounded-md">Laboratorios</h3>
+           </div>
+         </div>
+         <div class="p-6">
+           <p class="text-[12px]">
+             Contamos con 5 salas de cómputo con más de 200 equipos de última generación, software especializado 
+             y servidores dedicados para prácticas y proyectos de investigación.
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ 
